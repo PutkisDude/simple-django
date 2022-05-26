@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.TicketListView.as_view()),
     path('<int:pk>', views.TicketDetailView.as_view(), name="ticket_detail"),
-    
+    path('<int:pk>/update', views.TicketUpdateView.as_view())
 ]

@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
 from . import models
 
 class TicketListView(ListView):
@@ -6,3 +6,8 @@ class TicketListView(ListView):
 
 class TicketDetailView(DetailView):
 	model = models.Ticket
+
+class TicketUpdateView(UpdateView):
+	model = models.Ticket
+	fields = ["title", "description"]
+	success_url = ""
