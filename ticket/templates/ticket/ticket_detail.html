@@ -1,6 +1,7 @@
 <a href="/">Back to /</a><br /><br />
 <p>Reported by {{ticket.user}}</p><br />
 <a href="{{ticket.get_absolute_url}}/update"><button>Update</button></a>
+<a href="{{ticket.get_absolute_url}}/delete"><button>Delete</button></a>
 <p>ID: #{{ticket.id}} </p>
 <p>Title: {{ticket.title}}<p>
 {{ticket.description}}
