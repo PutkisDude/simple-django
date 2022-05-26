@@ -1,0 +1,8 @@
+
+{% for ticket in object_list %}
+
+<b><b>#{{ticket.id}}</b> - {{ticket.title}} 
+	
+{% empty  %}
+<p>No tickets available</p>
+{% endfor %}
