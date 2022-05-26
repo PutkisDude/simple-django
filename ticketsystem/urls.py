@@ -20,4 +20,6 @@ from ticket import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.TicketListView.as_view()),
+    path('<int:pk>', views.TicketDetailView.as_view(), name="ticket_detail"),
+    
 ]

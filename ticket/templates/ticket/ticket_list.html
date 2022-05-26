@@ -1,7 +1,7 @@
 
 {% for ticket in object_list %}
 
-<b><b>#{{ticket.id}}</b> - {{ticket.title}} 
+<a href="{{ ticket.get_absolute_url }}"><b><b>#{{ticket.id}}</b> - {{ticket.title}}</a>
 	
 {% empty  %}
 <p>No tickets available</p>
