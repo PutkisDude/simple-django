@@ -1,7 +1,14 @@
+{% if user.is_authenticated %}
+<a href="./new"><button>add a new ticket</button></a>
+{% endif %}
+
 
 {% for ticket in object_list %}
-
-<a href="{{ ticket.get_absolute_url }}"><b><b>#{{ticket.id}}</b> - {{ticket.title}}</a>
+<p>
+	<a href="{{ ticket.get_absolute_url }}">
+		<b><b>#{{ticket.id}}</b> - {{ticket.title}}
+	</a>
+</p>
 	
 {% empty  %}
 <p>No tickets available</p>
