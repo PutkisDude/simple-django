@@ -1,5 +1,5 @@
 # simple-django
-Simple Ticket System
+Simple Ticket System - Course Practice (repository will be hidden after course)
 
 ## Features
 CRUD
@@ -13,6 +13,8 @@ CRUD
 
 ## Installation
 
+I Don't recommend install this unless you are teacher or student in the course. 
+
 1. Install virtualenv (sudo apt-get install virtualenv) and git (sudo apt-get install git)
 2. Make a new directory
     - mkdir django
@@ -21,22 +23,27 @@ CRUD
     - virtualenv env/ -p python3 --system-site-packages
     - source env/bin/activate
 4. Install Django
-    - which pip (make you sure you are in virtualenv)
+    - which pip # make you sure you are in virtualenv
     - echo "django==3.2" > requirements.txt
     - pip install -r requirements.txt
-5. Create a new directory
-    - mkdir ticketsystem
-    - cd ticketsystem
-6. Clone this repository
-    - git clone URL (TBH)
-7. Change SECRET_KEY (./ticketsystem/settings.py line 23)
-8. Makemigrations and migrate
+5. Clone this repository and change a directory
+    - git clone https://github.com/PutkisDude/simple-django.git
+    - cd simple-django/
+6. Not needed for local testing - Change SECRET_KEY (./ticketsystem/settings.py line 23) 
+7. Makemigrations and migrate
     - ./manage.py makemigrations
     - ./manage.py migrate
-9. Create a superuser
+8. Create a superuser
     - ./manage.py createsuperuser
-10. Run server
+9. Run server
     - ./manage.py runserver
-11. Login via admin panel or http://127.0.0.1:8000/accounts/login/ with super user
-12. Open ListView:  http://127.0.0.1:8000
+10. Login via admin panel http://127.0.0.1:8000/admin // login page under development
+11. Open ListView:  http://127.0.0.1:8000
 
+# Pics
+### ListView
+![ListView](./pics/listview.png)
+### DetailView
+![DetailView](./pics/detailview.png)
+### DeleteConfirm
+![DeleteView](./pics/deleteview.png)
